@@ -1,4 +1,4 @@
-[![Profile Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&title=Profile%20Views&edge_flat=false)](https://github.com/KlyneChrysler)
+![Profile Views](https://img.shields.io/badge/Profile%20Views-1.2k-blue?style=flat&logo=github)
 
 Hi, I'm Klyne
 
