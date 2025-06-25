@@ -11,4 +11,4 @@ I'm a Computer Science student passionate about Software Engineering—transform
 
 <h1>🏆 GitHub Trophies</h1>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=KlyneChrysler&theme=monokai&margin-w=10&margin-h=10)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=KlyneChrysler&theme=tokyonight&margin-w=10&margin-h=10)](https://github.com/ryo-ma/github-profile-trophy)
