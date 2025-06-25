@@ -13,17 +13,17 @@ jobs:
       - uses: Platane/snk@v3
         id: snake-gif
         with:
-          github_user_name: KlyneChrysler # Replace with your GitHub username
+          github_user_name: KlyneChrysler # IMPORTANT: Replace 'KlyneChrysler' with your actual GitHub username
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark # This one is often better for dark themes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is automatically provided by GitHub
 
       - name: Push Snake SVG to Repository
         uses: crazy-max/ghaction-github-pages@v4
         with:
-          target_branch: dist
-          build_dir: dist
+          target_branch: dist # The branch where the SVG will be pushed
+          build_dir: dist     # The directory where the SVG is generated
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use the same token for pushing
