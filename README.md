@@ -1,4 +1,4 @@
-[![Profile Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&title=Profile%20Views&count_bg=%231E91CF&title_bg=%23000000&icon_color=%23ffffff&style=flat)](https://github.com/KlyneChrysler)
+(https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&title=Profile%20Views&count_bg=%231E91CF&title_bg=%23000000&icon_color=%23ffffff&style=flat)](https://github.com/KlyneChrysler)
 
 
 Hi, I'm Klyne
