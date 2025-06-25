@@ -1,4 +1,5 @@
-![Profile Views](https://visitor-badge.glitch.me/badge?page_id=KlyneChrysler&left_text=Profile%20Views)
+![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=Visitors&edge_flat=false)
+
 
 Hi, I'm Klyne
 
