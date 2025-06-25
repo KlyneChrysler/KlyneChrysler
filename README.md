@@ -14,5 +14,3 @@ I'm a Computer Science student passionate about Software Engineering.<!-- —tra
 ### GitHub Trophies
 [![trophy](https://github-profile-trophy.vercel.app/?username=KlyneChrysler&theme=tokyonight)](https://github.com/ryo-ma/github-profile-trophy)
 
-### My GitHub Activity
-![GitHub-Activity-Graph](https://github.com/KlyneChrysler/KlyneChrysler/raw/dist/github-contribution-grid-snake-dark.svg)
