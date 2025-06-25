@@ -1,3 +1,4 @@
+![Profile views](https://visitor-badge.glitch.me/badge?page_id=klynechrysler.klynechrysler)
 Hi, I'm Klyne
 
 I'm a Computer Science student passionate about Software Engineering—transforming ideas into visually appealing, functional web applications with clean and well-integrated code. I love exploring new technologies, building creative and practical projects, and I'm always open to learning and collaboration. Feel free to check out my repositories and reach out if you'd like to build something together!
