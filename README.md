@@ -9,6 +9,6 @@ I'm a Computer Science student passionate about Software Engineering—transform
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=KlyneChrysler&show_icons=true&theme=dark&include_all_commits=true&count_private=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KlyneChrysler&layout=compact&theme=dark&hide=css)](https://github.com/anuraghazra/github-readme-stats)
 
-<h1>🏆 GithUB Trophies</h1>
+<h1>🏆 GitHub Trophies</h1>
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=KlyneChrysler&theme=monokai&margin-w=10&margin-h=10)](https://github.com/ryo-ma/github-profile-trophy)
