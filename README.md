@@ -11,4 +11,4 @@ I'm a Computer Science student passionate about Software Engineering—transform
 
 <h1>🏆 GitHub Trophies</h1>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=KlyneChrysler&theme=tokyonight&margin-w=10&margin-h=10)](https://github.com/ryo-ma/github-profile-trophy)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=KlyneChrysler&show_icons=true&include_all_commits=true&count_private=true&bg_color=1A1B27&text_color=C0CAF5&icon_color=7AA2F7&title_color=BB9AF7&border_color=414868)](https://github.com/anuraghazra/github-readme-stats)
