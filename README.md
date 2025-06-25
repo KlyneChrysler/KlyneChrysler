@@ -1,4 +1,4 @@
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=KlyneChrysler.KlyneChrysler)
+![Profile Views](https://visitor-badge.glitch.me/badge?page_id=KlyneChrysler.KlyneChrysler&left_text=Profile%20Views)
 
 Hi, I'm Klyne
 
