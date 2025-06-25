@@ -1,5 +1,5 @@
-(https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&title=Profile%20Views&count_bg=%231E91CF&title_bg=%23000000&icon_color=%23ffffff&style=flat)](https://github.com/KlyneChrysler)
-
+![Profile Views](https://img.shields.io/badge/Profile%20Views-Auto-blue?style=flat&logo=github)
+[![Real Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&title=🧮%20Visitors&style=flat)](https://github.com/KlyneChrysler)
 
 Hi, I'm Klyne
 
