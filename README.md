@@ -1,6 +1,5 @@
-[![Profile Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/KlyneChrysler&title=Profile%20Views&style=flat)](https://github.com/KlyneChrysler)
 
-Hi, I'm Klyne
+<h1>Hi, I'm Klyne</h1>
 
 I'm a Computer Science student passionate about Software Engineering—transforming ideas into visually appealing, functional web applications with clean and well-integrated code. I love exploring new technologies, building creative and practical projects, and I'm always open to learning and collaboration. Feel free to check out my repositories and reach out if you'd like to build something together!
 
