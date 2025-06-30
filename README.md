@@ -7,10 +7,4 @@ I'm a Computer Science student passionate about Software Engineering.<!-- —tra
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/klyne-chrysler-b60875287)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat&logo=facebook&logoColor=white)](https://www.facebook.com/kccd11)
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=KlyneChrysler&show_icons=true&include_all_commits=true&count_private=true&bg_color=1A1B27&text_color=C0CAF5&icon_color=7AA2F7&title_color=BB9AF7&border_color=414868&custom_title=My%20GitHub%20Statistics)](https://github.com/anuraghazra/github-readme-stats)  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KlyneChrysler&layout=compact&hide=css&bg_color=1A1B27&text_color=C0CAF5&icon_color=7AA2F7&title_color=BB9AF7&border_color=414868)](https://github.com/anuraghazra/github-readme-stats)
-
-<h1>🏆 GitHub Trophies</h1>
-
-### GitHub Trophies
-[![trophy](https://github-profile-trophy.vercel.app/?username=KlyneChrysler&theme=tokyonight)](https://github.com/ryo-ma/github-profile-trophy)
 
