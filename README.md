@@ -35,5 +35,5 @@
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=postman" height="40" alt="postman logo"  />
   <img width="12" />
-  <img src="https://github.com/KlyneChrysler/assets-profile height="40" alt="scikit-learn logo" />
+  <img src="https://skillicons.dev/icons?i=all" height="40" alt="scikit-learn logo" />
 </div>
