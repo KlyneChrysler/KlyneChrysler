@@ -1,1 +1,1 @@
-Self-Taught Developer
+Self-Taught Coder
