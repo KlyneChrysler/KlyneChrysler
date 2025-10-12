@@ -1,1 +1,1 @@
-Self-TaughT
+Self-Taught
