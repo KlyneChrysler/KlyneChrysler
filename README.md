@@ -1,7 +1,7 @@
-Self-Taught Dev
+self-taught dev
 
-I dislike teachers who are not prepared for what they are teaching.
+i avoid those who teach for profit rather than passion.
 
-I dislike educators who teach only for money and not for passion.
+i’m wary of educators who lack true mastery of their subject.
 
-And most of all, I dislike being taught coding by someone who doesn’t actually know how to code.
+above all, i question instruction from anyone who cannot code yet teaches coding. duh...
