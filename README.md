@@ -1,1 +1,1 @@
-self-taught dev
+Self-Taught Dev
