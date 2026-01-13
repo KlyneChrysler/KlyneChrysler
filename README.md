@@ -1,1 +1,1 @@
-Self-Taught Dev & 1% Cracked
+1% Cracked
