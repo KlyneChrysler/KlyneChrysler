@@ -1,4 +1,4 @@
-## **The Core Solution: The Hybrid "Value-Exchange" Engine**
+[## **The Core Solution: The Hybrid "Value-Exchange" Engine**
 
 A system that treats every influencer deal as a **two-sided economic transaction** — what the business *gave* vs. what the influencer *delivered* — then tells the operator whether to repeat, scale, or stop.
 
@@ -186,3 +186,4 @@ Think of the system as a **scale**. One side holds what the business spent. The 
 | **Link Tracking** | Dub.co API | Counts clicks and sales from influencer links |
 | **Social Data** | Apify | Grabs views and likes from influencer posts |
 | **Traffic Proof** | GA4 | Proves the visitors were real people, not bots |
+](https://excalidraw.com/#room=1c8767beff97180f3f81,wfZe2nla1ZjZSqGffvBhXg)
