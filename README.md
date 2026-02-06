@@ -65,47 +65,124 @@ Ranks all influencers by **economic efficiency**:
 
 ## **High-Level Design**
 
+### **How It Works — The Big Picture**
+
+Think of the system as a **scale**. One side holds what the business spent. The other side holds what the business got back. The AI reads the scale and tells you what to do next.
+
 ```
-┌─────────────────────────────────────────────────┐
-│                  OPERATOR UI (Next.js 15)        │
-│  Create Deal  |  Dashboard  |  Leaderboard       │
-└──────────┬──────────────┬───────────────┬────────┘
-           │              │               │
-     ┌─────▼─────┐ ┌─────▼──────┐ ┌──────▼──────┐
-     │ DEAL INPUT │ │ DEAL OUTPUT│ │  AI ENGINE  │
-     │  LEDGER    │ │  TRACKER   │ │  (Genkit)   │
-     │            │ │            │ │             │
-     │ Cash       │ │ Dub.co API │ │ Gain/Loss   │
-     │ Trade/Comp │ │ Apify      │ │ ROI Calc    │
-     │ Hybrid Mix │ │ GA4        │ │ Repeat/     │
-     │            │ │ QR Scans   │ │ Scale/Stop  │
-     │ ──────►TDC │ │ ──────►TDR │ │ Recommend   │
-     └─────┬──────┘ └─────┬──────┘ └──────┬──────┘
-           │              │               │
-     ┌─────▼──────────────▼───────────────▼──────┐
-     │           SUPABASE (Postgres)              │
-     │                                            │
-     │  deals        deal_items      deal_results │
-     │  (contract)   (each comp/     (TDR, EMV,   │
-     │               cash/trade      sales, ROI)  │
-     │               line item                    │
-     │               with $ value)                │
-     │                                            │
-     │  influencers          leaderboard_scores   │
-     └────────────────────────────────────────────┘
+    WHAT YOU GAVE                              WHAT YOU GOT BACK
+    ────────────                               ─────────────────
+                         ┌──────────┐
+   Cash ($50)            │          │         Sales ($320)
+   Hotel (2 nights $180) │  THE     │         Website Clicks (1,200)
+   Free Dinner ($45)     │  SCALE   │         Views (50,000 → EMV $150)
+                         │          │
+   ─────────────────     │          │         ─────────────────────
+   Total Cost: $275      └──────────┘         Total Return: $470
+                              │
+                              ▼
+                     ┌────────────────┐
+                     │   THE VERDICT  │
+                     │                │
+                     │  ROI = +71%    │
+                     │                │
+                     │  ✅ SCALE UP   │
+                     └────────────────┘
 ```
 
-**Data flow:** Operator logs deal inputs (TDC) → Influencer posts content → Attribution APIs feed outputs (TDR) → AI computes ROI and verdict → Dashboard shows Gain/Loss + recommendation.
+---
+
+### **The 5 Steps — From Deal to Decision**
+
+```
+ STEP 1            STEP 2             STEP 3           STEP 4          STEP 5
+ ──────            ──────             ──────           ──────          ──────
+
+ LOG THE           INFLUENCER         TRACK THE        CALCULATE       DECIDE
+ DEAL              DOES THE WORK      RESULTS          GAIN / LOSS     NEXT MOVE
+
+ ┌──────────┐     ┌──────────┐      ┌──────────┐    ┌──────────┐    ┌──────────┐
+ │ Operator  │     │Influencer│      │ System   │    │ AI reads │    │ AI says: │
+ │ lists     │────▶│ posts    │─────▶│ collects │───▶│ both     │───▶│          │
+ │ what they │     │ content  │      │ the data │    │ sides    │    │ REPEAT   │
+ │ gave:     │     │ with     │      │          │    │          │    │ SCALE    │
+ │           │     │ tracking │      │ Clicks   │    │ Cost vs  │    │ or STOP  │
+ │ - Cash    │     │ links    │      │ Sales    │    │ Return   │    │          │
+ │ - Product │     │          │      │ Views    │    │          │    │          │
+ │ - Comps   │     │          │      │ Store    │    │ ROI =    │    │          │
+ │           │     │          │      │ visits   │    │ (R - C)  │    │          │
+ │ = COST    │     │          │      │ = RETURN │    │   / C    │    │          │
+ └──────────┘     └──────────┘      └──────────┘    └──────────┘    └──────────┘
+```
+
+---
+
+### **Where Each Tool Fits**
+
+```
+┌───────────────────────────────────────────────────────────────┐
+│                                                               │
+│   OPERATOR SCREEN (Next.js 15)                                │
+│   ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐      │
+│   │ Create Deal │  │  Dashboard  │  │  Leaderboard    │      │
+│   │ Form        │  │  Gain/Loss  │  │  Best → Worst   │      │
+│   └──────┬──────┘  └──────┬──────┘  └────────┬────────┘      │
+│          │                │                   │               │
+└──────────┼────────────────┼───────────────────┼───────────────┘
+           │                │                   │
+           ▼                ▼                   ▼
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   BRAIN — AI ENGINE (Genkit)                                │
+│                                                             │
+│   • Adds up the Cost (TDC)                                  │
+│   • Adds up the Return (TDR)                                │
+│   • Calculates ROI                                          │
+│   • Gives the verdict: Repeat / Scale / Stop                │
+│                                                             │
+└────────────────────────────┬────────────────────────────────┘
+                             │
+        ┌────────────────────┼────────────────────┐
+        │                    │                    │
+        ▼                    ▼                    ▼
+  ┌───────────┐      ┌────────────┐      ┌─────────────┐
+  │ Dub.co    │      │ Apify      │      │ GA4         │
+  │           │      │            │      │             │
+  │ Tracks    │      │ Scrapes    │      │ Confirms    │
+  │ clicks &  │      │ views &    │      │ real users  │
+  │ sales     │      │ likes      │      │ not bots    │
+  └─────┬─────┘      └─────┬──────┘      └──────┬──────┘
+        │                   │                    │
+        └───────────────────┼────────────────────┘
+                            ▼
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   DATABASE — SUPABASE                                       │
+│                                                             │
+│   Stores everything:                                        │
+│   • Every deal (who, what, when)                            │
+│   • Every line item (each comp, cash, or trade + $ value)   │
+│   • Every result (clicks, sales, views, ROI)                │
+│   • Every influencer's score and verdict history            │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### **One Sentence Summary**
+
+> The operator logs what they gave, the system tracks what came back, the AI compares the two numbers, and tells the operator: **do it again, do it bigger, or don't do it again.**
 
 ---
 
 ## **Tech Stack**
 
-| Layer | Tool | Role |
+| Layer | Tool | What It Does (Simply) |
 | :---- | :---- | :---- |
-| **UI & Logic** | Next.js 15 | Deal creation form, dashboard, leaderboard |
-| **AI** | Genkit | ROI analysis, repeat/scale/stop recommendation |
-| **Database** | Supabase | Deal ledger (inputs + outputs), auth, leaderboard |
-| **Link Attribution** | Dub.co API | Click & sales tracking via branded links |
-| **Exposure Data** | Apify | Scrape influencer post metrics (views, likes) |
-| **Engagement Proof** | GA4 | Validate real traffic, compute EMV |
+| **Screen** | Next.js 15 | What the operator sees — forms, charts, leaderboard |
+| **Brain** | Genkit | The AI that does the math and gives the verdict |
+| **Storage** | Supabase | Saves every deal, every item, every result |
+| **Link Tracking** | Dub.co API | Counts clicks and sales from influencer links |
+| **Social Data** | Apify | Grabs views and likes from influencer posts |
+| **Traffic Proof** | GA4 | Proves the visitors were real people, not bots |
